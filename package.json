@@ -1,0 +1,33 @@
+{
+  "name": "koa-crypto",
+  "version": "0.1.0",
+  "description": "A crypto middleware based on AES.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "type-check": "tsc --noEmit",
+    "lint": "npm run type-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sqrthree/koa-crypto.git"
+  },
+  "keywords": [],
+  "author": "sqrtthree <imsqrtthree@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sqrthree/koa-crypto/issues"
+  },
+  "homepage": "https://github.com/sqrthree/koa-crypto#readme",
+  "dependencies": {
+    "koa": "~2.13.1",
+    "koa-unless": "~1.0.7",
+    "lodash": "~4.17.21"
+  },
+  "devDependencies": {
+    "@sqrtthree/tsconfig": "~1.0.0",
+    "@types/node": "~16.3.2",
+    "typescript": "~4.3.5"
+  }
+}
