@@ -55,14 +55,16 @@ export function cryptoMiddleware(
     const secret: string = await options.secret(ctx)
 
     if (!secret) {
-      ctx.throw(400, 'Invalid secret')
+      ctx.throw(500, 'Invalid secret', {
+        code: 'SECRET_INVALID',
+      })
     }
 
     const hasQuery = !_.isEmpty(query)
     const hasBody = !_.isEmpty(body)
 
     if (method === 'GET' || method === 'DELETE' || hasQuery) {
-      const cipherText: string = query ? (query.cipherText as string) : ''
+      const cipherText: string = query ? query.cipherText : ''
 
       if (cipherText) {
         let plaintext: Record<string, any> = {}
