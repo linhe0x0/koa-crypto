@@ -21,10 +21,7 @@ const decrypt = function decrypt(
   return result
 }
 
-const outdated = function outdated(
-  timestamp: number,
-  min: number = 5
-): boolean {
+const outdated = function outdated(timestamp: number, min = 5): boolean {
   const now = Date.now()
   const diff = Math.abs(now - timestamp)
   const m = 60000 // 60 * 1000
