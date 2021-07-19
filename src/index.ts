@@ -36,7 +36,7 @@ interface CryptoMiddlewareOptions {
 
 export function cryptoMiddleware(
   options: CryptoMiddlewareOptions
-): Koa.Middleware {
+): unless.Middleware {
   const middleware = async function middleware(
     ctx: Koa.Context,
     next: Koa.Next
