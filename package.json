@@ -1,6 +1,6 @@
 {
   "name": "@sqrtthree/koa-crypto",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A crypto middleware based on AES.",
   "main": "dist/index.js",
   "scripts": {
